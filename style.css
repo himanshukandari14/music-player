@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );
+}
+#main{
+   
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#head{
+    font-family: 'Gabarito', cursive;
+}
+#playwindow{
+    animation: scale 600ms  1 ;
+}
+@keyframes scale {
+    from {transform:scale(.9);}
+    to { transform:scale(1)}
+}
+
+#progress{
+    -webkit-appearance: none;
+    height: 10px;
+   border-radius: 4px;
+    background: #3fecff;
+    cursor: pointer;
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #318cf5;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(255,26,26,0.22);;
+}
+.spinner{
+    animation: spin 7s linear  infinite ;
+}
+@keyframes spin{
+    from{
+        transform: rotate(-360deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
